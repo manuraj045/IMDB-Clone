@@ -1,0 +1,69 @@
+header {
+  margin: 1.5rem;
+  padding: 1.5rem;
+  border: 3px solid #000;
+  background-color: #edebeb;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+p {
+  text-align: justify;
+}
+
+#movies_details {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  margin: 1.5rem;
+  padding: 1.5rem;
+}
+
+#movies_poster {
+  max-width: 300px;
+  margin: 2rem;
+  animation: moveOut 1s;
+}
+
+#movies_info {
+  max-width: 300px;
+  margin: 2rem;
+  animation: moveIn 1s;
+}
+
+#vertical-line {
+  border: 1px solid #000;
+  height: inherit;
+}
+
+#horizontal-line {
+  border: 1px solid #000;
+  width: inherit;
+  margin: 10px;
+}
+
+.box-shadow {
+  box-shadow: 0px 8px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Defining Animation */
+@keyframes moveIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes moveOut {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translate(0);
+  }
+}

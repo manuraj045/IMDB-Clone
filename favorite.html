@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMDB Clone | Favorite Movies</title>
+    <!-- Stylesheets-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="movie.css" />
+  </head>
+  <body>
+    <!-- NavBar -->
+    <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a href="home.html"
+          ><img
+            id="imdb-icon"
+            src="https://images.freeimages.com/fic/images/icons/2779/simple_icons/4096/imdb.png"
+            alt="imdb icon"
+        /></a>
+        <button class="btn btn-light btn-lg" id="favMoviesbtn">
+          Favorite Movies
+        </button>
+      </div>
+    </nav>
+    <header class="box-shadow">
+      <h1>Favorite Movies</h1>
+    </header>
+    <div id="movies_list"></div>
+
+    <!-- JavaScript File -->
+    <script src="favorite.js"></script>
+  </body>
+</html>
