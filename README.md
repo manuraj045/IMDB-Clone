@@ -1,4 +1,4 @@
-# Alarm-Clock using Vanilla JavaScript
+# Mini IMDB Clone using Vanilla JavaScript
 ---
 
 This repository has the souce code for a mini IMDB clone app developed using Vanilla JavaScript, HTML, CSS and Bootstrap Framework.</li>
@@ -34,7 +34,7 @@ Create a mini IMDB clone app. Use ONLY vanilla javascript, no libraries or frame
 ## Live DEMO
 ---
 
-https://manuraj045.github.io/Alarm-Clock/
+https://manuraj045.github.io/IMDB-Clone/
 <br>
 
 
