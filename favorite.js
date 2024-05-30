@@ -1,9 +1,8 @@
 /* ----------------- Getting the html elements for the favorite page ---------------- */
 const moviesListContainer = document.getElementById("movies_list");
-const favoriteMoviesList = JSON.parse(localStorage.getItem("favoriteMovies"));
 
 /* ----------------- Function to display Movies list from Local Storage ---------------- */
-favoriteMoviesList.forEach((movie, index) => {
+JSON.parse(localStorage.getItem("favoriteMovies")).forEach((movie) => {
   const movieCard = document.createElement("div");
   const movieFigure = document.createElement("figure");
   const movieImage = document.createElement("img");
@@ -22,7 +21,7 @@ favoriteMoviesList.forEach((movie, index) => {
 
   //Event Listener for Remove Favorite Button
   removeMovieBtn.addEventListener("click", () => {
-    removeFavoriteMovie(index);
+    removeFavoriteMovie(movie);
     movieCard.remove();
   });
 
@@ -34,8 +33,14 @@ favoriteMoviesList.forEach((movie, index) => {
 });
 
 /* ----------------- Function to remove Movie from Local Storage ---------------- */
-function removeFavoriteMovie(index) {
+function removeFavoriteMovie(movie) {
   let favMovies = JSON.parse(localStorage.getItem("favoriteMovies")) || [];
+  let index;
+  favMovies.forEach((element, position) => {
+    if (element.movieId === movie.movieId) {
+      index = position;
+    }
+  });
   favMovies.splice(index, 1); // Remove the movie at the specified index
   localStorage.setItem("favoriteMovies", JSON.stringify(favMovies));
 }
